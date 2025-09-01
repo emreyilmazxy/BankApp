@@ -8,9 +8,9 @@ namespace BankApp.Data.Enums
 {
     public enum TransactionType
     {
-        Deposit = 1,
-        Withdrawal = 2,
-        Transfer = 3,
-        BillPayment = 4,
+        Deposit = 0,
+        Withdrawal = 1,
+        Transfer = 2,
+        BillPayment = 3,
     }
 }

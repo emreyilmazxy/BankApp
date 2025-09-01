@@ -8,8 +8,8 @@ namespace BankApp.Data.Enums
 {
     public enum UserType
     {
-        costumer = 1,
-        admin = 2,
+        costumer = 0,
+        Admin = 1,
 
     }// end of enum UserType
 }
