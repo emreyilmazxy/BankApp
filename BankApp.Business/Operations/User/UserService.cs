@@ -95,7 +95,7 @@ namespace BankApp.Business.Operations.User
             }
 
             var unProtectedPassword = _dataProtection.Unprotect(userEntity.Password);
-            if (unProtectedPassword != request.password)
+            if (unProtectedPassword != request.Password)
             {
                 return new ServiceMessage<UserInfoDto>()
                 {
