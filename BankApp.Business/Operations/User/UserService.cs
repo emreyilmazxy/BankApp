@@ -69,7 +69,7 @@ namespace BankApp.Business.Operations.User
                 Data = new UserInfoDto
                 {
                     Id = id,
-                    BirtDate = user.BirtDate,
+                    BirthDate = user.BirthDate,
                     UserType = user.UserType,
                     Email = user.Email,
                     IsTwoFactorEnable = user.IsTwoFactorEnable,
@@ -137,7 +137,7 @@ namespace BankApp.Business.Operations.User
                 Message = "giriş başarılı",
                 Data = new UserInfoDto()
                 {
-                    BirtDate = userEntity.BirtDate,
+                    BirthDate = userEntity.BirthDate,
                     UserType = userEntity.UserType,
                     Email = userEntity.Email,
                     Id = userEntity.Id,
@@ -219,7 +219,7 @@ namespace BankApp.Business.Operations.User
                 Data = new UserInfoDto()
                 {
                     Id = newUser.Id,
-                    BirtDate = newUser.BirtDate,
+                    BirthDate = newUser.BirthDate,
                     Email = newUser.Email,
                     IsTwoFactorEnable = newUser.IsTwoFactorEnable,
                     FirstName = newUser.FirstName,
@@ -246,7 +246,7 @@ namespace BankApp.Business.Operations.User
             user.FirstName = userInfo.FirstName;
             user.LastName = userInfo.LastName;
             user.PhoneNumber = userInfo.PhoneNumber;
-            user.BirtDate = userInfo.BirtDate;
+            user.BirthDate = userInfo.BirthDate;
             user.Email = userInfo.Email;
 
             await _repository.UpdateAsync(user);

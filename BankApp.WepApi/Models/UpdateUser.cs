@@ -16,7 +16,7 @@ namespace BankApp.WepApi.Models
 
         [Required(ErrorMessage = "Doğum tarihi zorunludur.")]
         [DataType(DataType.Date, ErrorMessage = "Geçerli bir tarih giriniz.")]
-        public DateTime BirtDate { get; set; } //--
+        public DateTime BirthDate { get; set; } //--
 
         [Required(ErrorMessage = "Telefon numarası zorunludur.")]
         [Phone(ErrorMessage = "Geçerli bir telefon numarası giriniz.")]

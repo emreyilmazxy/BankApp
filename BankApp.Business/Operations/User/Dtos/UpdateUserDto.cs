@@ -12,7 +12,7 @@ namespace BankApp.Business.Operations.User.Dtos
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime BirtDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
       
