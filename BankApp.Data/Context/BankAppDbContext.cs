@@ -10,12 +10,12 @@ namespace BankApp.Data.Context
 {
     public class BankAppDbContext : DbContext
     {
-        DbSet<AccountEntity> Accounts { get; set; }
-        DbSet<UserEntity> Users { get; set; }
-        DbSet<MoneyTransactionEntity> MoneyTransactions { get; set; }
-        DbSet<UserActivity> UserActivities { get; set; }
-        DbSet<UserTwoFactorEntity> UserTwoFactors { get; set; }
-        DbSet<BillEntity> Bills { get; set; }
+        public DbSet<AccountEntity> Accounts { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<MoneyTransactionEntity> MoneyTransactions { get; set; }
+        public DbSet<UserActivity> UserActivities { get; set; }
+        public DbSet<UserTwoFactorEntity> UserTwoFactors { get; set; }
+        public DbSet<BillEntity> Bills { get; set; }
 
         public BankAppDbContext(DbContextOptions<BankAppDbContext> options) : base(options)
         {
