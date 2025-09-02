@@ -9,7 +9,7 @@ namespace BankApp.Business.Operations.TwoFactor
 {
     public interface ITwoFactorService
     {
-        Task<ServiceMessage<string>> GenerateOtpAsync(int userId, string provider);
+        Task<ServiceMessage> GenerateOtpAsync(int userId, string provider);
         Task<ServiceMessage<bool>> VerifyOtpAsync(int userId, string otpCode);
 
         string GenerateOtpCode();
