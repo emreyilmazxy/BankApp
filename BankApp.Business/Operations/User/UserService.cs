@@ -205,7 +205,7 @@ namespace BankApp.Business.Operations.User
                 LastName = request.LastName,
                 Email = request.Email,
                 PhoneNumber = request.PhoneNumber,
-                Password = _dataProtection.protect(request.Password),
+                Password = _dataProtection.Protect(request.Password),
                 IsTwoFactorEnable = request.IsTwoFactorEnable,
             };
 

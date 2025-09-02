@@ -16,7 +16,7 @@ namespace BankApp.Business.DataProtection
             _dataProtector = provider.CreateProtector("BankApp");
         }
 
-        public string protect(string text)
+        public string Protect(string text)
         {
             return _dataProtector.Protect(text);
         }
