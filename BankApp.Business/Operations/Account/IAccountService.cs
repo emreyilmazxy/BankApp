@@ -22,7 +22,7 @@ namespace BankApp.Business.Operations.Account
 
         Task<ServiceMessage<TransferResultDto>> DepositAsync(DepositRequestDto request);
 
-        Task<ServiceMessage> DeleteAccountAsync(int id);
+        Task<ServiceMessage> DeleteAccountAsync(int id, int userId);
 
 
     }
