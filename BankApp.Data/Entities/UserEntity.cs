@@ -16,7 +16,7 @@ namespace BankApp.Data.Entities
 
         public UserType UserType { get; set; }
 
-        public DateTime BirtDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
@@ -39,7 +39,7 @@ namespace BankApp.Data.Entities
     {
         public override void Configure(EntityTypeBuilder<UserEntity> builder)
         {
-            builder.Property(x => x.BirtDate)
+            builder.Property(x => x.BirthDate)
                    .IsRequired()
                    .HasColumnType("date");
 

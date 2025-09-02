@@ -34,7 +34,7 @@ namespace BankApp.WepApi.Models
         public string ConfirmPassword { get; set; } // ---
         [Required(ErrorMessage = "doğum tarihi zorunludur")]
         [DataType(DataType.DateTime)]
-        public DateTime BirtDate { get; set; }
+        public DateTime BirthDate { get; set; }
         
     } // end of class RegisterRequestModel
 }

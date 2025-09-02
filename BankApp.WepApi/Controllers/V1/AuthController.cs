@@ -48,7 +48,7 @@ namespace BankApp.WepApi.Controllers.V1
                 Email = request.Email,
                 PhoneNumber = request.PhoneNumber,
                 Password = request.Password,
-                BirtDate = request.BirtDate
+                BirthDate = request.BirthDate
             };
             var result = await _userService.RegisterAsync(registerDto);
             if (!result.IsSuccess)
@@ -173,7 +173,7 @@ namespace BankApp.WepApi.Controllers.V1
             var userInfo = new UserInfoDto()
             {
                 Id = id,
-                BirtDate = request.BirtDate,
+                BirthDate = request.BirthDate,
                 Email = request.Email,
                 FirstName = request.FirstName,
                 LastName = request.LastName,

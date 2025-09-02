@@ -17,6 +17,6 @@ namespace BankApp.Business.Operations.User.Dtos
         public string Password { get; set; } 
         public bool IsTwoFactorEnable { get; set; } = false;
 
-        public DateTime BirtDate { get; set; }
+        public DateTime BirthDate { get; set; }
     } // end of class RegisterDto
 }
