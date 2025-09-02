@@ -73,7 +73,7 @@ namespace BankApp.WepApi.Controllers.V1
             var userDto = new LoginRequestDto()
             {
                 Email = request.Email,
-                password = request.Password,
+                Password = request.Password,
             };
 
             var user = await _userService.LoginUserAsync(userDto);
