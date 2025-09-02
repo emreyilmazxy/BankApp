@@ -72,7 +72,7 @@ namespace BankApp.Business.Operations.Security
                 };
             }
 
-            user.Password = _dataProtection.protect(dto.NewPassword);
+            user.Password = _dataProtection.Protect(dto.NewPassword);
             await _unitOfWork.SaveChangesAsync();
 
             return new ServiceMessage<string>

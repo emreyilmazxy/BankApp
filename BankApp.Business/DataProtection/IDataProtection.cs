@@ -8,7 +8,7 @@ namespace BankApp.Business.DataProtection
 {
     public interface IDataProtection
     {
-        string protect(string text);
+        string Protect(string text);
         string Unprotect(string text);
     } // end of interface IDataProtection
 }
