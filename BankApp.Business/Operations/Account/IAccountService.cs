@@ -14,7 +14,7 @@ namespace BankApp.Business.Operations.Account
 
         Task<ServiceMessage<AccountBalanceDto>> GetBalanceAsync(int id, int userId);
 
-        Task<ServiceMessage<List<TransactionListDto>>> GetTransactionsAsync(int id);
+        Task<ServiceMessage<List<TransactionListDto>>> GetUserTransactionsAsync(int userId);
 
         Task<ServiceMessage<AccountInfoDto>> AddAccountAsync(int id ,AccountInfoDto request);
 
