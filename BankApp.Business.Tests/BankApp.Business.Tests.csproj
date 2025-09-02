@@ -17,5 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BankApp.Business\BankApp.Business.csproj" />
     <ProjectReference Include="..\BankApp.Data\BankApp.Data.csproj" />
+    <ProjectReference Include="..\BankApp.WepApi\BankApp.WepApi.csproj" />
   </ItemGroup>
 </Project>
