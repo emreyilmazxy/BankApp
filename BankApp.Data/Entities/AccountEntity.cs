@@ -14,7 +14,6 @@ namespace BankApp.Data.Entities
         public string AccountNumber { get; set; }
         public decimal Balance { get; set; }            // account balance
         public string Currency { get; set; }            // ( TRY, USD) a like
-        public DateTime CreatedAt { get; set; }
         public bool IsActive { get; set; }
 
         

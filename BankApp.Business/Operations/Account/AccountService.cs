@@ -72,7 +72,7 @@ namespace BankApp.Business.Operations.Account
                     AccountNumber = newAccount.AccountNumber,
                     Currency = newAccount.Currency,
                     Balance = newAccount.Balance,
-                    CreatedAt = newAccount.CreatedDate,
+                    CreatedDate = newAccount.CreatedDate,
                 }
             };
         } // end of AddAcountAsync
@@ -87,7 +87,7 @@ namespace BankApp.Business.Operations.Account
                                                 UserId = a.UserId,
                                                 AccountNumber = a.AccountNumber,
                                                 Currency = a.Currency,
-                                                CreatedAt = a.CreatedAt,
+                                                CreatedDate = a.CreatedDate,
                                                 Balance = a.Balance
 
                                             }).ToListAsync();
