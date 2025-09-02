@@ -97,6 +97,7 @@ builder.Services.AddScoped<ISecurityService, SecurityService>();
 builder.Services.AddScoped<IUserActivityService, UserActivityService>();
 builder.Services.AddScoped<ITwoFactorService, TwoFactorService>();
 builder.Services.AddScoped<UserLoggerHelper>();
+builder.Services.AddScoped<IOtpSender, OtpSender>();
 builder.Services.AddHttpContextAccessor();
 
 
