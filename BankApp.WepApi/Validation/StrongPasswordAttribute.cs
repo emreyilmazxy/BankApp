@@ -1,5 +1,4 @@
-﻿using BankApp.WebApi.Helpers;
-using BankApp.WepApi.Helpers;
+﻿using BankApp.WepApi.Helpers;
 using System.ComponentModel.DataAnnotations;
 
 namespace BankApp.WepApi.Validation
