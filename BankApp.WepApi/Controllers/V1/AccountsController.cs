@@ -198,9 +198,13 @@ namespace BankApp.WepApi.Controllers.V1
 
             }
 
-            var userIdStr = int.TryParse(User.FindFirstValue("id"),out int userId);
+            var userIdString = User.FindFirstValue("id");
+            if (!int.TryParse(userIdString, out int userId))
+            {
+                return Unauthorized("Kullanıcı doğrulanamadı");
+            }
 
-            var result = await _accountService.DeleteAccountAsync(id);
+            var result = await _accountService.DeleteAccountAsync(id, userId);
 
             if (!result.IsSuccess)
             {

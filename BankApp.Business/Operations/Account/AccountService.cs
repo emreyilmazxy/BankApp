@@ -111,25 +111,25 @@ namespace BankApp.Business.Operations.Account
             };
         } // end of AllAccountAsync
 
-        public async Task<ServiceMessage> DeleteAccountAsync(int id) // method beginning
+        public async Task<ServiceMessage> DeleteAccountAsync(int id, int userId) // method beginning
         {
             var account = await _repository.GetByIdAsync(id);
-            if (account is null)
+            if (account is null || account.UserId != userId)
             {
-                return new ServiceMessage()
+                return new ServiceMessage
                 {
-                     IsSuccess = false,
-                     Message = "hesap bulunamadı"
+                    IsSuccess = false,
+                    Message = account is null ? "hesap bulunamadı" : "Bu hesaba erişiminiz yok"
                 };
             }
 
             await _repository.DeleteAsync(account);
             await _unitOfWork.SaveChangesAsync();
 
-            return new ServiceMessage()
+            return new ServiceMessage
             {
-                 IsSuccess = true,
-                 Message = "hesap başarıyla silindi"
+                IsSuccess = true,
+                Message = "hesap başarıyla silindi"
             };
         } // end of DeleteAccountAsync
 
