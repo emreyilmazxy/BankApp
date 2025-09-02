@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BankApp.WebApi.Helpers
+namespace BankApp.WepApi.Helpers
 {
     public static class SequentialNumberMethod // this class checks for sequential numbers in a string
     {
