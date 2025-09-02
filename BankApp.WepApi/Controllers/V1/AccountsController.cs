@@ -76,22 +76,22 @@ namespace BankApp.WepApi.Controllers.V1
         } // end of GetBalanceById
 
         [HttpGet]
-        [Route("{id}/transactions")]
-        public async Task<IActionResult> GetTransactions(int id) // method beginning
+        [Route("{userId}/transactions")]
+        public async Task<IActionResult> GetUserTransactions(int userId) // method beginning
         {
-            if (id <= 0)
+            if (userId <= 0)
             {
                 return BadRequest("Geçersiz kullanıcı ID");
             }
 
-            var result = await _accountService.GetTransactionsAsync(id);
+            var result = await _accountService.GetUserTransactionsAsync(userId);
 
             if (!result.IsSuccess || result.Data == null || !result.Data.Any())
             {
                 return NotFound(result.Message ?? "İşlem bulunamadı.");
             }
 
-            await _userLoggerHelper.LogAsync(id, UserActionType.TransactionsViewed);
+            await _userLoggerHelper.LogAsync(userId, UserActionType.TransactionsViewed);
 
             return Ok(result.Data);
         }
@@ -158,7 +158,7 @@ namespace BankApp.WepApi.Controllers.V1
 
             await _userLoggerHelper.LogAsync(int.Parse(userId), UserActionType.TransferMade);
 
-            return CreatedAtAction(nameof(GetTransactions), new { id = id }, result.Data);
+            return CreatedAtAction(nameof(GetUserTransactions), new { userId = id }, result.Data);
         } // end of Transfer
 
         [HttpPost("{id}/deposit")]

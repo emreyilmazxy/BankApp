@@ -229,12 +229,12 @@ namespace BankApp.Business.Operations.Account
             };
         } // end of GetBalanceAsync
 
-        public async Task<ServiceMessage<List<TransactionListDto>>> GetTransactionsAsync(int id) // method beginning
+        public async Task<ServiceMessage<List<TransactionListDto>>> GetUserTransactionsAsync(int userId) // method beginning
         {
             // Fetch all transactions where the user is either the sender or the receiver.
             // Includes related users and accounts for richer transaction info.
             var accountTransactions = await _transactionRepository
-                .GetAll(x => x.SenderUserId == id || x.ReceiverUserId == id)
+                .GetAll(x => x.SenderUserId == userId || x.ReceiverUserId == userId)
                 .Include(x => x.SenderUser)
                 .Include(x => x.ReceiverUser)
                 .Include(x => x.SenderAccount)
@@ -271,10 +271,10 @@ namespace BankApp.Business.Operations.Account
                                      : "-",
 
                     // Indicates whether the current user was the sender
-                    IsSender = a.SenderUserId == id,
+                    IsSender = a.SenderUserId == userId,
 
                     // Displays the full name of the "other party" in the transaction
-                    OtherPartyFullName = a.SenderUserId == id
+                    OtherPartyFullName = a.SenderUserId == userId
                                         ? (a.ReceiverUser != null
                                             ? a.ReceiverUser.FirstName + " " + a.ReceiverUser.LastName
                                             : "System")
@@ -289,7 +289,7 @@ namespace BankApp.Business.Operations.Account
                 IsSuccess = true,
                 Data = accountTransactions
             };
-        } // end of GetTransactionAsync
+        } // end of GetUserTransactionsAsync
 
         public async Task<ServiceMessage<TransferResultDto>> TransferAsync(TransferRequestDto request) // method beginning
         {
