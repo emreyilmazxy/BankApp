@@ -13,6 +13,6 @@ namespace BankApp.Business.Operations.Account.Dtos
         public string AccountNumber { get; set; }
         public decimal Balance { get; set; }
         public string Currency { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }
